@@ -131,37 +131,11 @@
                             <div class="control-dot yellow"></div>
                             <div class="control-dot green"></div>
                         </div>
-                        <div class="demo-title">
-                            <span class="demo-icon">🤖</span>
-                            AI Chart Analyzer
-                        </div>
-                        <div class="demo-status">
-                            <div class="status-indicator live"></div>
-                            <span>Live Demo</span>
-                        </div>
+                        <div class="demo-title">Free Chart Analysis Demo</div>
                     </div>
                     
                     <div class="demo-content" id="demoContent">
                         <div class="upload-state">
-                            <div class="demo-preview">
-                                <div class="chart-mockup">
-                                    <div class="chart-grid"></div>
-                                    <div class="chart-line"></div>
-                                    <div class="chart-candles">
-                                        <div class="candle green"></div>
-                                        <div class="candle red"></div>
-                                        <div class="candle green"></div>
-                                        <div class="candle green"></div>
-                                        <div class="candle red"></div>
-                                    </div>
-                                    <div class="analysis-overlay">
-                                        <div class="support-line"></div>
-                                        <div class="resistance-line"></div>
-                                        <div class="trend-arrow">↗</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
                             <div class="upload-icon">
                                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                     <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
@@ -169,42 +143,13 @@
                                     <line x1="12" y1="3" x2="12" y2="15"/>
                                 </svg>
                             </div>
-                            
-                            <div class="upload-content">
-                                <h3>Get Free AI Analysis</h3>
-                                <p class="upload-description">Upload your trading chart and get instant professional analysis</p>
-                                
-                                <div class="features-preview">
-                                    <div class="feature-item">
-                                        <span class="feature-icon">📊</span>
-                                        <span>Pattern Recognition</span>
-                                    </div>
-                                    <div class="feature-item">
-                                        <span class="feature-icon">📈</span>
-                                        <span>Trend Analysis</span>
-                                    </div>
-                                    <div class="feature-item">
-                                        <span class="feature-icon">🎯</span>
-                                        <span>Entry/Exit Points</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
+                            <h3>Drop Your Chart Here</h3>
+                            <p>Try AI Chart Analysis</p>
                             <button class="upload-btn" onclick="document.getElementById('demoChartInput').click()">
                                 <input type="file" id="demoChartInput" accept="image/*" style="display: none;" onchange="handleDemoChartUpload(event)">
-                                <span class="btn-icon">🚀</span>
-                                <span>Analyze My Chart</span>
+                                Choose File
                             </button>
-                            
-                            <div class="upload-info">
-                                <p class="upload-hint">
-                                    <span class="hint-icon">✨</span>
-                                    100% Free • No Registration Required • Instant Results
-                                </p>
-                                <div class="supported-formats">
-                                    <span>Supports: JPG, PNG, GIF • Max 10MB</span>
-                                </div>
-                            </div>
+                            <p class="upload-hint">Try it out! Click the button to start analyzing</p>
                         </div>
                         
                         <div class="loading-state" id="loadingState" style="display: none;">
