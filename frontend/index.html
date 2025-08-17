@@ -11,8 +11,6 @@
     <link rel="preload" href="js/interactions.js" as="script">
     
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/responsive.css">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
@@ -23,18 +21,18 @@
         <div class="nav-container">
             <a href="#" class="logo-modern">
                 <div class="logo-icon-modern">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                        <rect x="3" y="10" width="4" height="11" rx="2" fill="url(#logoGrad1)"/>
-                        <rect x="10" y="6" width="4" height="15" rx="2" fill="url(#logoGrad2)"/>
-                        <rect x="17" y="3" width="4" height="18" rx="2" fill="url(#logoGrad3)"/>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                        <rect x="3" y="12" width="3" height="9" rx="1.5" fill="url(#logoGrad1)"/>
+                        <rect x="10" y="8" width="3" height="13" rx="1.5" fill="url(#logoGrad2)"/>
+                        <rect x="17" y="4" width="3" height="17" rx="1.5" fill="url(#logoGrad3)"/>
                         <defs>
                             <linearGradient id="logoGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" stop-color="#3B82F6"/>
-                                <stop offset="100%" stop-color="#1E40AF"/>
+                                <stop offset="100%" stop-color="#2563EB"/>
                             </linearGradient>
                             <linearGradient id="logoGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" stop-color="#8B5CF6"/>
-                                <stop offset="100%" stop-color="#6D28D9"/>
+                                <stop offset="100%" stop-color="#7C3AED"/>
                             </linearGradient>
                             <linearGradient id="logoGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
                                 <stop offset="0%" stop-color="#EC4899"/>
@@ -74,11 +72,18 @@
         
         <div class="hero-container">
             <div class="hero-content-modern">
+                <div class="hero-badge">
+                    <span class="badge-icon">🚀</span>
+                    <span>AI-Powered Trading Analysis</span>
+                </div>
+                
                 <h1 class="hero-title-modern">
-                    Never Analyze Charts Wrong Again,<br>
-                    <span class="gradient-text">There's an AI for that.</span><br>
-                    <span class="hero-subtitle-modern">Try ChartMaster free for 7 days</span>
+                    Never Analyze Charts<br>
+                    Wrong Again,<br>
+                    <span class="gradient-text">There's an AI for that.</span>
                 </h1>
+                
+                <p class="hero-subtitle-modern">Try ChartMaster free for 7 days</p>
                 
                 <p class="hero-description-modern">
                     Get professional technical analysis in seconds. Our AI analyzes patterns, trends, and indicators to provide you with clear trading recommendations.
@@ -87,12 +92,12 @@
                 <div class="hero-actions">
                     <a href="#pricing" class="main-cta-modern">
                         <span>Start Free Trial</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
                     </a>
                     <button class="demo-btn-modern" onclick="scrollToDemo()">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polygon points="5 3 19 12 5 21 5 3"/>
                         </svg>
                         <span>Watch Demo</span>
@@ -133,7 +138,7 @@
                     <div class="demo-content-modern" id="demoContent">
                         <div class="upload-state-modern">
                             <div class="upload-icon-modern">
-                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                     <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
                                     <polyline points="17 8 12 3 7 8"/>
                                     <line x1="12" y1="3" x2="12" y2="15"/>
@@ -199,6 +204,30 @@
         </div>
     </section>
 
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container-modern">
+            <div class="trust-logos">
+                <div class="trust-item">
+                    <div class="trust-stat">50,000+</div>
+                    <div class="trust-label">Active Traders</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-stat">$2.5B+</div>
+                    <div class="trust-label">Volume Analyzed</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-stat">150+</div>
+                    <div class="trust-label">Countries</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-stat">4.9/5</div>
+                    <div class="trust-label">User Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Features Section -->
     <section id="features" class="features-modern">
         <div class="container-modern">
@@ -210,7 +239,7 @@
             <div class="features-grid-modern">
                 <div class="feature-card-modern">
                     <div class="feature-icon-modern">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                         </svg>
                     </div>
@@ -220,7 +249,7 @@
                 
                 <div class="feature-card-modern">
                     <div class="feature-icon-modern">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="10"/>
                             <polyline points="12 6 12 12 16 14"/>
                         </svg>
@@ -231,7 +260,7 @@
                 
                 <div class="feature-card-modern">
                     <div class="feature-icon-modern">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M9 11H1l6-6 6 6zm5 12V11l6-6 6 6z"/>
                         </svg>
                     </div>
@@ -241,7 +270,7 @@
                 
                 <div class="feature-card-modern">
                     <div class="feature-icon-modern">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
                         </svg>
                     </div>
@@ -251,7 +280,7 @@
                 
                 <div class="feature-card-modern">
                     <div class="feature-icon-modern">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
                         </svg>
                     </div>
@@ -261,7 +290,7 @@
                 
                 <div class="feature-card-modern">
                     <div class="feature-icon-modern">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
                             <circle cx="9" cy="7" r="4"/>
                             <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
@@ -341,19 +370,19 @@
                     
                     <div class="plan-features-modern">
                         <div class="feature-item-modern">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"/>
                             </svg>
                             <span>100 analyses per month</span>
                         </div>
                         <div class="feature-item-modern">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"/>
                             </svg>
                             <span>Basic technical indicators</span>
                         </div>
                         <div class="feature-item-modern">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"/>
                             </svg>
                             <span>Email support</span>
@@ -379,31 +408,31 @@
                     
                     <div class="plan-features-modern">
                         <div class="feature-item-modern">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"/>
                             </svg>
                             <span>Unlimited analyses</span>
                         </div>
                         <div class="feature-item-modern">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"/>
                             </svg>
                             <span>Advanced AI models</span>
                         </div>
                         <div class="feature-item-modern">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"/>
                             </svg>
                             <span>Real-time alerts</span>
                         </div>
                         <div class="feature-item-modern">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"/>
                             </svg>
                             <span>API access</span>
                         </div>
                         <div class="feature-item-modern">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"/>
                             </svg>
                             <span>Priority support</span>
@@ -426,19 +455,19 @@
                     
                     <div class="plan-features-modern">
                         <div class="feature-item-modern">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"/>
                             </svg>
                             <span>Custom AI models</span>
                         </div>
                         <div class="feature-item-modern">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"/>
                             </svg>
                             <span>White-label solution</span>
                         </div>
                         <div class="feature-item-modern">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"/>
                             </svg>
                             <span>Dedicated support</span>
@@ -461,11 +490,11 @@
                 <p>Join thousands of traders who trust ChartMaster AI for their technical analysis</p>
                 <a href="#pricing" class="main-cta-modern large">
                     <span>Start Your Free Trial</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
                 </a>
-                <p class="cta-note">No credit card required • 3-day free trial • Cancel anytime</p>
+                <p class="cta-note">No credit card required • 7-day free trial • Cancel anytime</p>
             </div>
         </div>
     </section>
@@ -477,18 +506,18 @@
                 <div class="footer-brand-modern">
                     <a href="#" class="logo-modern">
                         <div class="logo-icon-modern">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                                <rect x="3" y="10" width="4" height="11" rx="2" fill="url(#footerGrad1)"/>
-                                <rect x="10" y="6" width="4" height="15" rx="2" fill="url(#footerGrad2)"/>
-                                <rect x="17" y="3" width="4" height="18" rx="2" fill="url(#footerGrad3)"/>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                <rect x="3" y="12" width="3" height="9" rx="1.5" fill="url(#footerGrad1)"/>
+                                <rect x="10" y="8" width="3" height="13" rx="1.5" fill="url(#footerGrad2)"/>
+                                <rect x="17" y="4" width="3" height="17" rx="1.5" fill="url(#footerGrad3)"/>
                                 <defs>
                                     <linearGradient id="footerGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
                                         <stop offset="0%" stop-color="#3B82F6"/>
-                                        <stop offset="100%" stop-color="#1E40AF"/>
+                                        <stop offset="100%" stop-color="#2563EB"/>
                                     </linearGradient>
                                     <linearGradient id="footerGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
                                         <stop offset="0%" stop-color="#8B5CF6"/>
-                                        <stop offset="100%" stop-color="#6D28D9"/>
+                                        <stop offset="100%" stop-color="#7C3AED"/>
                                     </linearGradient>
                                     <linearGradient id="footerGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
                                         <stop offset="0%" stop-color="#EC4899"/>
@@ -542,12 +571,12 @@
                 <p>&copy; 2024 ChartMaster AI. All rights reserved.</p>
                 <div class="social-links-modern">
                     <a href="#" aria-label="Twitter">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
                         </svg>
                     </a>
                     <a href="#" aria-label="LinkedIn">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
                             <circle cx="4" cy="4" r="2"/>
                         </svg>
@@ -562,7 +591,7 @@
         <div class="modal-overlay-modern" onclick="closeUpgradeModal()"></div>
         <div class="modal-content-modern">
             <button class="modal-close-modern" onclick="closeUpgradeModal()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="18" y1="6" x2="6" y2="18"/>
                     <line x1="6" y1="6" x2="18" y2="18"/>
                 </svg>
@@ -576,19 +605,19 @@
             
             <div class="modal-features-modern">
                 <div class="modal-feature-modern">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="20 6 9 17 4 12"/>
                     </svg>
                     <span>Detailed pattern analysis</span>
                 </div>
                 <div class="modal-feature-modern">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="20 6 9 17 4 12"/>
                     </svg>
                     <span>Entry & exit points</span>
                 </div>
                 <div class="modal-feature-modern">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="20 6 9 17 4 12"/>
                     </svg>
                     <span>Risk management levels</span>
@@ -603,9 +632,19 @@
         </div>
     </div>
 
+    <!-- Chart Info Inputs (hidden by default) -->
+    <div id="chartInfoInputs" style="display: none;">
+        <img id="previewImage" style="max-width: 100%; max-height: 200px; border-radius: 8px; margin-bottom: 16px;">
+        <input type="text" id="symbolInput" placeholder="Symbol (e.g., BTC/USD)" style="width: 100%; margin-bottom: 12px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+        <input type="text" id="timeframeInput" placeholder="Timeframe (e.g., 1H, 4H, 1D)" style="width: 100%; margin-bottom: 12px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+        <textarea id="notesInput" placeholder="Additional notes..." style="width: 100%; height: 60px; margin-bottom: 16px; padding: 8px; border: 1px solid #ddd; border-radius: 4px; resize: vertical;"></textarea>
+        <button onclick="analyzeChart()" style="width: 100%; padding: 12px; background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 50%, #EC4899 100%); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">
+            Analyze Chart
+        </button>
+    </div>
+
     <!-- Scripts -->
     <script src="js/interactions.js"></script>
-    <script src="js/main.js"></script>
     <script>
         // Plan selection
         function selectPlan(plan) {
