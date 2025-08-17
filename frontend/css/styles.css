@@ -614,7 +614,6 @@ body {
 .upload-icon {
     margin-bottom: var(--space-5);
     color: var(--gray-400);
-    animation: float 3s ease-in-out infinite;
 }
 
 .upload-state h3 {
