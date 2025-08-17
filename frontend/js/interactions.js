@@ -602,6 +602,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Load example chart function
+function loadExampleChart() {
+    // Create a sample chart data URL (you can replace this with an actual example image)
+    const exampleChartUrl = 'data:image/svg+xml;base64,' + btoa(`
+        <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="300" fill="#f8fafc"/>
+            <text x="200" y="150" text-anchor="middle" font-family="Arial" font-size="16" fill="#64748b">
+                Example Trading Chart
+            </text>
+            <path d="M50 250 L100 200 L150 180 L200 160 L250 140 L300 120 L350 100" 
+                  stroke="#3b82f6" stroke-width="3" fill="none"/>
+        </svg>
+    `);
+    
+    // Set the example chart as uploaded data
+    window.chartImageData = exampleChartUrl;
+    
+    // Hide upload state and show chart info inputs
+    document.querySelector('.upload-state').style.display = 'none';
+    document.getElementById('chartInfoInputs').style.display = 'block';
+    document.getElementById('previewImage').src = exampleChartUrl;
+    
+    // Pre-fill some example data
+    document.getElementById('symbolInput').value = 'BTC/USD';
+    document.getElementById('timeframeInput').value = '4H';
+    document.getElementById('notesInput').value = 'Example chart showing bullish trend with strong momentum';
+}
+
 // Initialize scan counter when page loads
 document.addEventListener('DOMContentLoaded', function() {
     // Update scan counter on page load
