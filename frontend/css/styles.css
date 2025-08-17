@@ -637,11 +637,58 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all var(--transition-fast);
+    animation: pulse-button 2s ease-in-out infinite;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
 }
 
 .upload-btn:hover {
     background: var(--gradient-hover);
     transform: translateY(-1px);
+    animation: none;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+}
+
+.upload-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+    pointer-events: none;
+}
+
+@keyframes pulse-button {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 4px 16px rgba(59, 130, 246, 0.25);
+    }
+    50% { 
+        transform: scale(1.05);
+        box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+    }
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.upload-hint {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+    margin-top: var(--space-3);
+    font-weight: 500;
+    opacity: 0.8;
+    animation: fadeInUp 0.8s ease-out 1.2s both;
 }
 
 /* Loading State */
