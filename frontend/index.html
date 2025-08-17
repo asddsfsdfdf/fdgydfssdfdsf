@@ -131,7 +131,10 @@
                             <div class="control-dot yellow"></div>
                             <div class="control-dot green"></div>
                         </div>
-                        <div class="demo-title">Free Chart Analysis Demo</div>
+                        <div class="demo-badge">
+                            <div class="live-dot"></div>
+                            <span>Interactive Demo</span>
+                        </div>
                     </div>
                     
                     <div class="demo-content" id="demoContent">
@@ -144,12 +147,16 @@
                                 </svg>
                             </div>
                             <h3>Drop Your Chart Here</h3>
-                            <p>Try AI Chart Analysis</p>
+                            <div class="upload-actions">
+                                <p>Try AI Chart Analysis</p>
+                            </div>
                             <button class="upload-btn" onclick="document.getElementById('demoChartInput').click()">
                                 <input type="file" id="demoChartInput" accept="image/*" style="display: none;" onchange="handleDemoChartUpload(event)">
                                 Choose File
                             </button>
-                            <p class="upload-hint">Try it out! Click the button to start analyzing</p>
+                            <div class="upload-hint-container">
+                                <p class="upload-hint">Try it out! Click the button to start analyzing</p>
+                            </div>
                         </div>
                         
                         <div class="loading-state" id="loadingState" style="display: none;">
