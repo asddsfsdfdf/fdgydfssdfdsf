@@ -133,59 +133,19 @@ function updateScanCounter() {
 
 // Show upgrade modal
 function showUpgradeModal() {
-    const modal = document.createElement('div');
-    modal.className = 'demo-upgrade-modal';
-    modal.innerHTML = `
-        <div class="modal-overlay" onclick="closeDemoModal()"></div>
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeDemoModal()">×</button>
-            <div class="modal-icon">🚀</div>
-            <h2>You've Used Your Free Scans!</h2>
-            <p>You've experienced the power of ChartMaster AI with your 2 free demo scans.</p>
-            
-            <div class="scan-stats">
-                <div class="stat-item">
-                    <div class="stat-number">2</div>
-                    <div class="stat-label">Scans Used</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">0</div>
-                    <div class="stat-label">Remaining</div>
-                </div>
-            </div>
-            
-            <div class="upgrade-benefits">
-                <h3>Unlock Unlimited Analysis</h3>
-                <ul>
-                    <li>✓ Unlimited chart scans</li>
-                    <li>✓ Advanced AI models</li>
-                    <li>✓ Real-time alerts</li>
-                    <li>✓ API access</li>
-                    <li>✓ Priority support</li>
-                </ul>
-            </div>
-            
-            <div class="upgrade-actions">
-                <a href="#pricing" class="upgrade-btn-primary" onclick="closeDemoModal()">
-                    Start 7-Day Free Trial
-                </a>
-                <button class="upgrade-btn-secondary" onclick="closeDemoModal()">
-                    Maybe Later
-                </button>
-            </div>
-        </div>
-    `;
-    
-    document.body.appendChild(modal);
-    setTimeout(() => modal.classList.add('show'), 10);
+    const modal = document.getElementById('upgradeModal');
+    if (modal) {
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
 }
 
 // Close modal
-function closeDemoModal() {
-    const modal = document.querySelector('.demo-upgrade-modal');
+function closeUpgradeModal() {
+    const modal = document.getElementById('upgradeModal');
     if (modal) {
-        modal.classList.remove('show');
-        setTimeout(() => modal.remove(), 300);
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
     }
 }
 
