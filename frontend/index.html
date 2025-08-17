@@ -135,116 +135,20 @@
                     </div>
                     
                     <div class="demo-content" id="demoContent">
-                        <!-- Professional Demo Animation -->
-                        <div class="demo-animation-container">
-                            <!-- Step 1: Upload State -->
-                            <div class="demo-step upload-step active" id="uploadStep">
-                                <div class="upload-zone" onclick="startDemoAnimation()">
-                                    <div class="upload-icon-container">
-                                        <div class="upload-icon-bg"></div>
-                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="upload-icon">
-                                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-                                            <polyline points="17 8 12 3 7 8"/>
-                                            <line x1="12" y1="3" x2="12" y2="15"/>
-                                        </svg>
-                                    </div>
-                                    <h3>Drop Your Chart Here</h3>
-                                    <p>Try AI Chart Analysis</p>
-                                    <div class="demo-hint">Click to see demo</div>
-                                </div>
-                                
-                                <!-- Floating Chart Preview -->
-                                <div class="floating-chart" id="floatingChart">
-                                    <div class="chart-preview">
-                                        <div class="chart-header">
-                                            <div class="chart-title">BTC/USD</div>
-                                            <div class="chart-timeframe">1H</div>
-                                        </div>
-                                        <div class="chart-content">
-                                            <svg width="200" height="120" viewBox="0 0 200 120" class="chart-svg">
-                                                <defs>
-                                                    <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                                        <stop offset="0%" stop-color="rgba(59, 130, 246, 0.3)"/>
-                                                        <stop offset="100%" stop-color="rgba(59, 130, 246, 0.05)"/>
-                                                    </linearGradient>
-                                                </defs>
-                                                <path d="M10,80 Q30,60 50,70 T90,50 T130,40 T170,30 T190,25" 
-                                                      stroke="url(#grad1)" stroke-width="2" fill="none" class="chart-line"/>
-                                                <path d="M10,80 Q30,60 50,70 T90,50 T130,40 T170,30 T190,25 L190,110 L10,110 Z" 
-                                                      fill="url(#chartGradient)" class="chart-area"/>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="upload-state">
+                            <div class="upload-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                    <polyline points="17 8 12 3 7 8"/>
+                                    <line x1="12" y1="3" x2="12" y2="15"/>
+                                </svg>
                             </div>
-                            
-                            <!-- Step 2: Analysis State -->
-                            <div class="demo-step analysis-step" id="analysisStep">
-                                <div class="ai-processor">
-                                    <div class="ai-core">
-                                        <div class="core-center"></div>
-                                        <div class="core-ring ring-1"></div>
-                                        <div class="core-ring ring-2"></div>
-                                        <div class="core-ring ring-3"></div>
-                                    </div>
-                                    <h3>AI Analyzing Chart...</h3>
-                                    <div class="analysis-progress">
-                                        <div class="progress-steps">
-                                            <div class="progress-step active">
-                                                <div class="step-dot"></div>
-                                                <span>Pattern Recognition</span>
-                                            </div>
-                                            <div class="progress-step">
-                                                <div class="step-dot"></div>
-                                                <span>Trend Analysis</span>
-                                            </div>
-                                            <div class="progress-step">
-                                                <div class="step-dot"></div>
-                                                <span>Signal Generation</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Step 3: Results State -->
-                            <div class="demo-step results-step" id="resultsStep">
-                                <div class="results-container">
-                                    <div class="result-header">
-                                        <div class="sentiment-badge bullish">
-                                            <div class="sentiment-icon">📈</div>
-                                            <div class="sentiment-text">
-                                                <div class="sentiment-label">BULLISH</div>
-                                                <div class="confidence-score">87% Confidence</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="key-insights">
-                                        <div class="insight-item">
-                                            <div class="insight-icon">🎯</div>
-                                            <div class="insight-text">Strong uptrend detected</div>
-                                        </div>
-                                        <div class="insight-item">
-                                            <div class="insight-icon">📊</div>
-                                            <div class="insight-text">Support at $42,500</div>
-                                        </div>
-                                        <div class="insight-item">
-                                            <div class="insight-icon">⚡</div>
-                                            <div class="insight-text">Bullish momentum</div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="cta-section">
-                                        <button class="get-full-analysis" onclick="showUpgradeModal()">
-                                            Get Full Analysis
-                                        </button>
-                                        <button class="try-again" onclick="resetDemoAnimation()">
-                                            Try Again
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                            <h3>Drop Your Chart Here</h3>
+                            <p>Try AI Chart Analysis</p>
+                            <button class="upload-btn" onclick="document.getElementById('demoChartInput').click()">
+                                <input type="file" id="demoChartInput" accept="image/*" style="display: none;" onchange="handleDemoChartUpload(event)">
+                                Choose File
+                            </button>
                         </div>
                         
                         <div class="loading-state" id="loadingState" style="display: none;">
