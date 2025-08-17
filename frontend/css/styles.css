@@ -562,12 +562,8 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: rgba(16, 185, 129, 0.1);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(16, 185, 129, 0.2);
-    padding: 6px 12px;
-    border-radius: 20px;
+    background: transparent;
+    padding: 0;
     font-size: 0.85rem;
     font-weight: 600;
     color: #059669;
@@ -594,6 +590,22 @@ body {
     100% {
         transform: scale(0.95);
         box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}
+
+.hint-arrow {
+    font-size: 16px;
+    margin-right: 8px;
+    color: #3B82F6;
+    animation: bounce-arrow 2s ease-in-out infinite;
+}
+
+@keyframes bounce-arrow {
+    0%, 100% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(-4px); 
     }
 }
 
@@ -736,6 +748,9 @@ body {
     font-weight: 500;
     opacity: 0.8;
     animation: fadeInUp 0.8s ease-out 1.2s both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Loading State */
