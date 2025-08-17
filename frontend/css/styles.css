@@ -719,10 +719,14 @@ body {
 }
 
 .upload-content h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--gray-800);
     margin-bottom: var(--space-2);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .upload-description {
@@ -730,6 +734,31 @@ body {
     margin-bottom: var(--space-4);
     font-size: 1rem;
     line-height: 1.5;
+}
+
+.features-preview {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-2);
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding: var(--space-1) var(--space-3);
+    background: rgba(59, 130, 246, 0.08);
+    border-radius: var(--radius-2xl);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    border: 1px solid rgba(59, 130, 246, 0.12);
+}
+
+.feature-icon {
+    font-size: 0.9rem;
 }
 
 /* Enhanced Upload Button */
@@ -788,20 +817,25 @@ body {
     100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
 }
 
-/* Try it text */
-.try-it-text {
-    font-size: 0.875rem;
-    color: var(--gray-500);
-    margin: var(--space-3) 0;
-    font-weight: 500;
-    opacity: 0.8;
-    animation: fadeInUp 0.8s ease-out 1.5s both;
-}
-
 /* Upload Info */
 .upload-info {
     text-align: center;
-    margin-top: var(--space-2);
+}
+
+.upload-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+    font-size: 0.9rem;
+    color: var(--success);
+    font-weight: 600;
+    margin-bottom: var(--space-2);
+    animation: fadeInUp 0.8s ease-out 1.5s both;
+}
+
+.hint-icon {
+    font-size: 1rem;
 }
 
 .supported-formats {
