@@ -644,6 +644,59 @@ body {
     transform: translateY(-1px);
 }
 
+/* Blinking animation for upload button */
+.blinking-btn {
+    animation: gentle-blink 3s ease-in-out infinite;
+}
+
+@keyframes gentle-blink {
+    0%, 90% { 
+        opacity: 1; 
+        box-shadow: 0 8px 24px rgba(59, 130, 246, 0.25);
+    }
+    95% { 
+        opacity: 0.7; 
+        box-shadow: 0 8px 32px rgba(59, 130, 246, 0.4);
+    }
+    100% { 
+        opacity: 1; 
+        box-shadow: 0 8px 24px rgba(59, 130, 246, 0.25);
+    }
+}
+
+/* Demo hint styling */
+.demo-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+    animation: fadeInUp 0.8s ease-out 1.2s both;
+}
+
+.hint-arrow {
+    font-size: 18px;
+    color: var(--primary-blue);
+    animation: bounce-arrow 2s ease-in-out infinite;
+    transform: rotate(-45deg);
+}
+
+@keyframes bounce-arrow {
+    0%, 100% { 
+        transform: rotate(-45deg) translateY(0px); 
+    }
+    50% { 
+        transform: rotate(-45deg) translateY(-3px); 
+    }
+}
+
+.hint-text {
+    font-size: 0.8rem;
+    color: var(--gray-600);
+    font-weight: 500;
+    margin: 0;
+}
+
 /* Loading State */
 .loading-state {
     text-align: center;

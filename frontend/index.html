@@ -145,10 +145,14 @@
                             </div>
                             <h3>Drop Your Chart Here</h3>
                             <p>Try AI Chart Analysis</p>
-                            <button class="upload-btn" onclick="document.getElementById('demoChartInput').click()">
+                            <button class="upload-btn blinking-btn" onclick="document.getElementById('demoChartInput').click()">
                                 <input type="file" id="demoChartInput" accept="image/*" style="display: none;" onchange="handleDemoChartUpload(event)">
                                 Choose File
                             </button>
+                            <div class="demo-hint">
+                                <div class="hint-arrow">↗</div>
+                                <p class="hint-text">Try it out! Click the choose file to start analyzing</p>
+                            </div>
                         </div>
                         
                         <div class="loading-state" id="loadingState" style="display: none;">
