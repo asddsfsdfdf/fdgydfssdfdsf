@@ -566,7 +566,6 @@ function resetDemo() {
 // Add drag and drop support
 document.addEventListener('DOMContentLoaded', function() {
     const demoContent = document.getElementById('demoContent');
-    const demoPanel = document.querySelector('.demo-panel');
     
     if (demoContent) {
         demoContent.addEventListener('dragover', (e) => {
@@ -598,16 +597,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 dataTransfer.items.add(file);
                 input.files = dataTransfer.files;
                 handleDemoChartUpload({ target: input });
-            }
-        });
-    }
-    
-    // Make entire demo panel clickable
-    if (demoPanel) {
-        demoPanel.addEventListener('click', (e) => {
-            // Only trigger if not clicking on the file input itself
-            if (e.target.id !== 'demoChartInput') {
-                document.getElementById('demoChartInput').click();
             }
         });
     }
