@@ -126,126 +126,150 @@
             <div class="hero-visual">
                 <div class="demo-panel">
                     <div class="demo-header">
-                        <div class="demo-controls">
-                            <div class="control-dot red"></div>
-                            <div class="control-dot yellow"></div>
-                            <div class="control-dot green"></div>
+                        <div class="demo-window-controls">
+                            <div class="window-dot close"></div>
+                            <div class="window-dot minimize"></div>
+                            <div class="window-dot maximize"></div>
                         </div>
-                        <div class="demo-badge">
-                            <div class="live-dot"></div>
+                        <div class="demo-title">ChartMaster AI</div>
+                        <div class="demo-status">
+                            <div class="status-indicator"></div>
                             <span>Interactive Demo</span>
                         </div>
                     </div>
                     
-                    <div class="demo-content" id="demoContent">
-                        <div class="upload-state">
-                            <div class="upload-icon">
-                                <div class="demo-animation-container">
-                                    <!-- Chart wird reingezogen -->
-                                    <div class="chart-drag" id="chartDrag">
-                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                            <path d="M9 9l5 5-5 5"/>
-                                            <path d="M7 3l5 6-5 6"/>
-                                        </svg>
-                                    </div>
+                    <div class="demo-workspace">
+                        <div class="demo-sidebar">
+                            <div class="sidebar-section">
+                                <h4>Analysis Tools</h4>
+                                <div class="tool-item active">
+                                    <div class="tool-icon">📊</div>
+                                    <span>Technical Analysis</span>
+                                </div>
+                                <div class="tool-item">
+                                    <div class="tool-icon">📈</div>
+                                    <span>Pattern Recognition</span>
+                                </div>
+                                <div class="tool-item">
+                                    <div class="tool-icon">🎯</div>
+                                    <span>Price Targets</span>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar-section">
+                                <h4>Indicators</h4>
+                                <div class="indicator-grid">
+                                    <div class="indicator-chip">RSI</div>
+                                    <div class="indicator-chip">MACD</div>
+                                    <div class="indicator-chip">EMA</div>
+                                    <div class="indicator-chip">BB</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-main">
+                            <div class="chart-area" onclick="document.getElementById('demoChartInput').click()">
+                                <input type="file" id="demoChartInput" accept="image/*" style="display: none;" onchange="handleDemoChartUpload(event)">
+                                
+                                <div class="chart-placeholder">
+                                    <div class="chart-grid"></div>
                                     
-                                    <!-- Upload Icon -->
-                                    <div class="upload-icon-main" id="uploadIconMain">
-                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-                                            <polyline points="17 8 12 3 7 8"/>
-                                            <line x1="12" y1="3" x2="12" y2="15"/>
-                                        </svg>
-                                    </div>
-                                    
-                                    <!-- Analysis Animation -->
-                                    <div class="analysis-animation" id="analysisAnimation">
-                                        <div class="analysis-waves">
-                                            <div class="wave wave-1"></div>
-                                            <div class="wave wave-2"></div>
-                                            <div class="wave wave-3"></div>
+                                    <div class="demo-animation-container">
+                                        <!-- Floating Chart -->
+                                        <div class="floating-chart">
+                                            <div class="chart-preview">
+                                                <div class="chart-bars">
+                                                    <div class="bar" style="height: 40%"></div>
+                                                    <div class="bar" style="height: 60%"></div>
+                                                    <div class="bar" style="height: 80%"></div>
+                                                    <div class="bar" style="height: 45%"></div>
+                                                    <div class="bar" style="height: 70%"></div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="analysis-icon">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                        
+                                        <!-- Upload Icon -->
+                                        <div class="upload-icon-main">
+                                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                                <polyline points="17 8 12 3 7 8"/>
+                                                <line x1="12" y1="3" x2="12" y2="15"/>
                                             </svg>
                                         </div>
+                                        
+                                        <!-- AI Analysis -->
+                                        <div class="ai-analysis">
+                                            <div class="ai-core">
+                                                <div class="ai-ring ring-1"></div>
+                                                <div class="ai-ring ring-2"></div>
+                                                <div class="ai-ring ring-3"></div>
+                                                <div class="ai-center">AI</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Result Badge -->
+                                        <div class="result-badge">
+                                            <div class="result-content">
+                                                <div class="result-icon">📈</div>
+                                                <div class="result-info">
+                                                    <div class="result-label">BULLISH</div>
+                                                    <div class="result-confidence">87% Confidence</div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     
-                                    <!-- Result Animation -->
-                                    <div class="result-animation" id="resultAnimation">
-                                        <div class="result-badge">
-                                            <span class="result-icon">📈</span>
-                                            <span class="result-text">BULLISH</span>
+                                    <div class="chart-content">
+                                        <h3>Drop Your Chart Here</h3>
+                                        <p>Experience AI-powered analysis in seconds</p>
+                                        
+                                        <div class="upload-button">
+                                            <span>Choose File</span>
+                                            <div class="button-glow"></div>
+                                        </div>
+                                        
+                                        <div class="supported-formats">
+                                            <span>Supports: PNG, JPG, GIF • Max 10MB</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <h3>Drop Your Chart Here</h3>
-                            <div class="upload-actions">
-                                <p>Try AI Chart Analysis</p>
-                            </div>
-                            <button class="upload-btn" onclick="document.getElementById('demoChartInput').click()">
-                                <input type="file" id="demoChartInput" accept="image/*" style="display: none;" onchange="handleDemoChartUpload(event)">
-                                Choose File
-                            </button>
-                        </div>
-                        
-                        <div class="loading-state" id="loadingState" style="display: none;">
-                            <div class="ai-brain">
-                                <div class="brain-core"></div>
-                                <div class="brain-wave wave-1"></div>
-                                <div class="brain-wave wave-2"></div>
-                                <div class="brain-wave wave-3"></div>
-                            </div>
-                            <h3 id="loadingTitle">Analyzing Chart...</h3>
-                            <p id="loadingMessage">Detecting patterns and trends</p>
-                            <div class="progress-bar">
-                                <div class="progress-fill"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="result-state" id="resultState" style="display: none;">
-                            <div class="result-header">
-                                <div class="sentiment-indicator">
-                                    <div class="sentiment-icon" id="sentimentIcon">📈</div>
-                                    <div class="sentiment-details">
-                                        <div class="sentiment-label">Market Sentiment</div>
-                                        <div class="sentiment-value bullish" id="sentimentText">BULLISH</div>
+                            
+                            <div class="analysis-panel">
+                                <div class="panel-header">
+                                    <h4>Analysis Results</h4>
+                                    <div class="panel-actions">
+                                        <button class="panel-btn">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                                <polyline points="17 8 12 3 7 8"/>
+                                                <line x1="12" y1="3" x2="12" y2="15"/>
+                                            </svg>
+                                        </button>
+                                        <button class="panel-btn">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"/>
+                                            </svg>
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="confidence-meter">
-                                    <div class="confidence-label">Confidence</div>
-                                    <div class="confidence-bar">
-                                        <div class="confidence-fill" id="confidenceFill" style="width: 87%"></div>
+                                
+                                <div class="panel-content">
+                                    <div class="analysis-preview">
+                                        <div class="preview-item">
+                                            <div class="preview-label">Trend</div>
+                                            <div class="preview-value bullish">Bullish</div>
+                                        </div>
+                                        <div class="preview-item">
+                                            <div class="preview-label">Support</div>
+                                            <div class="preview-value">$64,200</div>
+                                        </div>
+                                        <div class="preview-item">
+                                            <div class="preview-label">Target</div>
+                                            <div class="preview-value">$68,500</div>
+                                        </div>
                                     </div>
-                                    <div class="confidence-text" id="confidenceText">87%</div>
                                 </div>
-                            </div>
-                            
-                            <div class="recommendation">
-                                <h4>AI Recommendation</h4>
-                                <p id="recommendationText">Strong uptrend detected with bullish momentum. Consider long positions with proper risk management.</p>
-                            </div>
-                            
-                            <div class="patterns-section" id="patternsSection" style="display: none;">
-                                <h4>Detected Patterns</h4>
-                                <div class="patterns-list" id="patternsList"></div>
-                            </div>
-                            
-                            <div class="analysis-section">
-                                <h4>Detailed Analysis</h4>
-                                <p class="analysis-text" id="analysisText">Technical analysis shows strong bullish momentum with key support levels holding.</p>
-                            </div>
-                            
-                            <div class="action-buttons">
-                                <button class="action-btn primary" onclick="showUpgradeModal()">
-                                    Get Full Analysis
-                                </button>
-                                <button class="action-btn secondary" onclick="resetDemo()">
-                                    Try Another
-                                </button>
                             </div>
                         </div>
                     </div>
