@@ -588,25 +588,7 @@ body {
         box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
     }
     100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
-    }
-}
-
-.hint-arrow {
-    font-size: 16px;
-    margin-right: 8px;
-    color: #3B82F6;
-    animation: bounce-arrow 2s ease-in-out infinite;
-}
-
-@keyframes bounce-arrow {
-    0%, 100% { 
-        transform: translateY(0); 
-    }
-    50% { 
-        transform: translateY(-4px); 
-    }
+    text-align: center;
 }
 
 .upload-actions {
@@ -723,6 +705,133 @@ body {
     transform: rotate(45deg);
     animation: shine 3s infinite;
     pointer-events: none;
+}
+
+/* Demo Animation */
+.demo-animation {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    height: 200px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.chart-drag-demo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.demo-chart {
+    position: absolute;
+    font-size: 32px;
+    opacity: 0;
+    animation: chartDragDemo 8s ease-in-out infinite;
+    filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.3));
+}
+
+.drag-path {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+    opacity: 0;
+    animation: dragPath 8s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.analysis-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border: 3px solid #10B981;
+    border-radius: 50%;
+    opacity: 0;
+    animation: analysisPulse 8s ease-in-out infinite;
+    animation-delay: 4s;
+}
+
+.analysis-pulse::before {
+    content: '🤖';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}
+
+@keyframes chartDragDemo {
+    0% { 
+        opacity: 0; 
+        transform: translateX(-100px) translateY(-20px) scale(0.8); 
+    }
+    15% { 
+        opacity: 1; 
+        transform: translateX(-50px) translateY(-10px) scale(0.9); 
+    }
+    35% { 
+        opacity: 1; 
+        transform: translateX(50%) translateY(0) scale(1); 
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: translateX(50%) translateY(0) scale(0.95); 
+    }
+    65% { 
+        opacity: 0; 
+        transform: translateX(50%) translateY(0) scale(0.9); 
+    }
+    100% { 
+        opacity: 0; 
+        transform: translateX(50%) translateY(0) scale(0.9); 
+    }
+}
+
+@keyframes dragPath {
+    0% { opacity: 0; }
+    20% { opacity: 0.6; }
+    40% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes analysisPulse {
+    0% { 
+        opacity: 0; 
+        transform: translate(-50%, -50%) scale(0.5); 
+    }
+    50% { 
+        opacity: 0; 
+        transform: translate(-50%, -50%) scale(0.5); 
+    }
+    60% { 
+        opacity: 1; 
+        transform: translate(-50%, -50%) scale(1); 
+    }
+    70% { 
+        opacity: 1; 
+        transform: translate(-50%, -50%) scale(1.2); 
+        border-color: #10B981;
+    }
+    80% { 
+        opacity: 0.8; 
+        transform: translate(-50%, -50%) scale(1); 
+        border-color: #059669;
+    }
+    90% { 
+        opacity: 0.4; 
+        transform: translate(-50%, -50%) scale(0.8); 
+    }
+    100% { 
+        opacity: 0; 
+        transform: translate(-50%, -50%) scale(0.5); 
+    }
 }
 
 @keyframes pulse-button {
