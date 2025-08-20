@@ -139,13 +139,6 @@
                     
                     <div class="demo-content" id="demoContent">
                         <div class="upload-state">
-                            <div class="demo-animation" id="demoAnimation">
-                                <div class="chart-drag-demo">
-                                    <div class="demo-chart" id="demoChart">📊</div>
-                                    <div class="drag-path"></div>
-                                    <div class="analysis-pulse" id="analysisPulse"></div>
-                                </div>
-                            </div>
                             <div class="upload-icon">
                                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                     <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
@@ -161,6 +154,12 @@
                                 <input type="file" id="demoChartInput" accept="image/*" style="display: none;" onchange="handleDemoChartUpload(event)">
                                 Choose File
                             </button>
+                            <div class="upload-hint-container">
+                                <p class="upload-hint">
+                                    <span class="hint-arrow">↑</span>
+                                    Try it out! Click the button to start analyzing
+                                </p>
+                            </div>
                         </div>
                         
                         <div class="loading-state" id="loadingState" style="display: none;">
