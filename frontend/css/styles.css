@@ -418,56 +418,6 @@ body {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
-/* Markets Badge Styles */
-.markets-badge-container {
-    margin-bottom: var(--space-8);
-    animation: fadeInUp 0.8s ease-out 0.5s both;
-}
-
-.markets-label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--gray-500);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    display: block;
-    margin-bottom: var(--space-3);
-}
-
-.markets-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2);
-}
-
-.market-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border);
-    padding: var(--space-2) var(--space-3);
-    border-radius: var(--radius-2xl);
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--gray-700);
-    transition: all var(--transition-fast);
-}
-
-.market-badge:hover {
-    background: var(--glass-bg-strong);
-    border-color: rgba(59, 130, 246, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
-}
-
-.market-icon {
-    font-size: 1.125rem;
-    line-height: 1;
-}
-
 .hero-actions {
     display: flex;
     align-items: center;
@@ -500,8 +450,8 @@ body {
 }
 
 .main-cta.large {
-    padding: var(--space-5) var(--space-10);
-    font-size: 1.25rem;
+    padding: var(--space-4) var(--space-8);
+    font-size: 1.125rem;
 }
 
 .demo-btn {
@@ -528,6 +478,30 @@ body {
     box-shadow: var(--glass-shadow);
 }
 
+.hero-stats {
+    display: flex;
+    gap: var(--space-8);
+    animation: fadeInUp 0.8s ease-out 0.8s both;
+}
+
+.stat-item {
+    text-align: left;
+}
+
+.stat-number {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    line-height: 1;
+    margin-bottom: var(--space-1);
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--gray-600);
+    font-weight: 500;
+}
+
 /* Hero Visual - Demo Panel */
 .hero-visual {
     display: flex;
@@ -545,7 +519,7 @@ body {
     box-shadow: var(--glass-shadow-strong);
     overflow: hidden;
     width: 100%;
-    max-width: 540px;
+    max-width: 420px;
     transition: all var(--transition-normal);
 }
 
@@ -619,6 +593,22 @@ body {
     }
 }
 
+.hint-arrow {
+    font-size: 16px;
+    margin-right: 8px;
+    color: #3B82F6;
+    animation: bounce-arrow 2s ease-in-out infinite;
+}
+
+@keyframes bounce-arrow {
+    0%, 100% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(-4px); 
+    }
+}
+
 .upload-actions {
     margin-bottom: 24px;
 }
@@ -668,8 +658,8 @@ body {
 }
 
 .demo-content {
-    padding: var(--space-10);
-    min-height: 480px;
+    padding: var(--space-8);
+    min-height: 360px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -758,6 +748,9 @@ body {
     font-weight: 500;
     opacity: 0.8;
     animation: fadeInUp 0.8s ease-out 1.2s both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Loading State */
@@ -1683,6 +1676,11 @@ body {
         align-items: stretch;
     }
     
+    .hero-stats {
+        justify-content: center;
+        gap: var(--space-6);
+    }
+    
     .features-grid {
         grid-template-columns: 1fr;
     }
@@ -1745,15 +1743,6 @@ body {
     
     .action-buttons {
         flex-direction: column;
-    }
-    
-    .markets-badges {
-        justify-content: center;
-    }
-    
-    .market-badge {
-        font-size: 0.8rem;
-        padding: var(--space-1) var(--space-2);
     }
 }
 
