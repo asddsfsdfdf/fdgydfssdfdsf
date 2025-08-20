@@ -593,22 +593,6 @@ body {
     }
 }
 
-.hint-arrow {
-    font-size: 16px;
-    margin-right: 8px;
-    color: #3B82F6;
-    animation: bounce-arrow 2s ease-in-out infinite;
-}
-
-@keyframes bounce-arrow {
-    0%, 100% { 
-        transform: translateY(0); 
-    }
-    50% { 
-        transform: translateY(-4px); 
-    }
-}
-
 .upload-actions {
     margin-bottom: 24px;
 }
@@ -748,9 +732,6 @@ body {
     font-weight: 500;
     opacity: 0.8;
     animation: fadeInUp 0.8s ease-out 1.2s both;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* Loading State */
@@ -830,6 +811,221 @@ body {
     0% { width: 0%; }
     50% { width: 70%; }
     100% { width: 100%; }
+}
+
+/* Interactive Demo Animation */
+.demo-animation-container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.chart-drag {
+    position: absolute;
+    top: -20px;
+    left: -40px;
+    opacity: 0;
+    transform: translateX(-50px) translateY(-20px) scale(0.8);
+    animation: chartDragIn 8s ease-in-out infinite;
+    z-index: 3;
+}
+
+.chart-drag svg {
+    filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.3));
+    color: #3B82F6;
+}
+
+.upload-icon-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+}
+
+.analysis-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 4;
+}
+
+.analysis-waves {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.wave {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    border-radius: 50%;
+    animation: analysisWave 2s ease-out infinite;
+}
+
+.wave-1 { width: 30px; height: 30px; animation-delay: 0s; }
+.wave-2 { width: 45px; height: 45px; animation-delay: 0.3s; }
+.wave-3 { width: 60px; height: 60px; animation-delay: 0.6s; }
+
+.analysis-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    animation: analysisIconSpin 2s linear infinite;
+}
+
+.result-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    z-index: 5;
+}
+
+.result-badge {
+    background: rgba(16, 185, 129, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 12px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 32px rgba(16, 185, 129, 0.2);
+}
+
+.result-icon {
+    font-size: 16px;
+}
+
+.result-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: #10B981;
+    letter-spacing: 0.5px;
+}
+
+/* Animation Keyframes */
+@keyframes chartDragIn {
+    0% { 
+        opacity: 0; 
+        transform: translateX(-50px) translateY(-20px) scale(0.8); 
+    }
+    10% { 
+        opacity: 1; 
+        transform: translateX(-20px) translateY(-10px) scale(0.9); 
+    }
+    20% { 
+        opacity: 1; 
+        transform: translateX(0) translateY(0) scale(1); 
+    }
+    25% {
+        opacity: 0;
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    30% {
+        opacity: 0;
+    }
+    35% {
+        opacity: 0;
+    }
+    100% { 
+        opacity: 0; 
+        transform: translateX(-50px) translateY(-20px) scale(0.8); 
+    }
+}
+
+@keyframes analysisWave {
+    0% { 
+        transform: translate(-50%, -50%) scale(0.8); 
+        opacity: 1; 
+    }
+    100% { 
+        transform: translate(-50%, -50%) scale(1.5); 
+        opacity: 0; 
+    }
+}
+
+@keyframes analysisIconSpin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Animation Timeline */
+.demo-animation-container {
+    animation: demoSequence 8s ease-in-out infinite;
+}
+
+@keyframes demoSequence {
+    /* Phase 1: Chart drag (0-25%) */
+    0% .chart-drag { opacity: 0; }
+    10% .chart-drag { opacity: 1; }
+    25% .chart-drag { opacity: 0; }
+    
+    /* Phase 2: Analysis (25-60%) */
+    25% .upload-icon-main { opacity: 0; }
+    25% .analysis-animation { opacity: 1; }
+    60% .analysis-animation { opacity: 0; }
+    60% .upload-icon-main { opacity: 1; }
+    
+    /* Phase 3: Result (60-80%) */
+    60% .result-animation { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    80% .result-animation { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+    
+    /* Phase 4: Reset (80-100%) */
+    100% .upload-icon-main { opacity: 1; }
+}
+
+/* Individual element animations */
+.upload-icon-main {
+    animation: uploadIconFade 8s ease-in-out infinite;
+}
+
+.analysis-animation {
+    animation: analysisShow 8s ease-in-out infinite;
+}
+
+.result-animation {
+    animation: resultShow 8s ease-in-out infinite;
+}
+
+@keyframes uploadIconFade {
+    0%, 24%, 61%, 100% { opacity: 1; }
+    25%, 60% { opacity: 0; }
+}
+
+@keyframes analysisShow {
+    0%, 24%, 61%, 100% { opacity: 0; }
+    25%, 60% { opacity: 1; }
+}
+
+@keyframes resultShow {
+    0%, 59%, 81%, 100% { 
+        opacity: 0; 
+        transform: translate(-50%, -50%) scale(0); 
+    }
+    60%, 80% { 
+        opacity: 1; 
+        transform: translate(-50%, -50%) scale(1); 
+    }
 }
 
 /* Result State */
