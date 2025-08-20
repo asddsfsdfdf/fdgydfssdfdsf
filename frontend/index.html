@@ -140,11 +140,47 @@
                     <div class="demo-content" id="demoContent">
                         <div class="upload-state">
                             <div class="upload-icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-                                    <polyline points="17 8 12 3 7 8"/>
-                                    <line x1="12" y1="3" x2="12" y2="15"/>
-                                </svg>
+                                <div class="demo-animation-container">
+                                    <!-- Chart wird reingezogen -->
+                                    <div class="chart-drag" id="chartDrag">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                            <path d="M9 9l5 5-5 5"/>
+                                            <path d="M7 3l5 6-5 6"/>
+                                        </svg>
+                                    </div>
+                                    
+                                    <!-- Upload Icon -->
+                                    <div class="upload-icon-main" id="uploadIconMain">
+                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                                            <polyline points="17 8 12 3 7 8"/>
+                                            <line x1="12" y1="3" x2="12" y2="15"/>
+                                        </svg>
+                                    </div>
+                                    
+                                    <!-- Analysis Animation -->
+                                    <div class="analysis-animation" id="analysisAnimation">
+                                        <div class="analysis-waves">
+                                            <div class="wave wave-1"></div>
+                                            <div class="wave wave-2"></div>
+                                            <div class="wave wave-3"></div>
+                                        </div>
+                                        <div class="analysis-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Result Animation -->
+                                    <div class="result-animation" id="resultAnimation">
+                                        <div class="result-badge">
+                                            <span class="result-icon">📈</span>
+                                            <span class="result-text">BULLISH</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <h3>Drop Your Chart Here</h3>
                             <div class="upload-actions">
@@ -154,12 +190,6 @@
                                 <input type="file" id="demoChartInput" accept="image/*" style="display: none;" onchange="handleDemoChartUpload(event)">
                                 Choose File
                             </button>
-                            <div class="upload-hint-container">
-                                <p class="upload-hint">
-                                    <span class="hint-arrow">↑</span>
-                                    Try it out! Click the button to start analyzing
-                                </p>
-                            </div>
                         </div>
                         
                         <div class="loading-state" id="loadingState" style="display: none;">
